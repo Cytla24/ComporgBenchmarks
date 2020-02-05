@@ -16,6 +16,14 @@ void floatadd(float a, float b);
 void floatmult(float a, float b);
 void floatdiv(float a, float b);
 
+void add(int a = 3, int b = 4){
+	long long i = 0;
+	while (i < 100000000000){
+		a+=b;
+		i++;
+	}
+}
+
 
 
 int main() {
