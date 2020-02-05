@@ -32,6 +32,14 @@ void intmult(int a=4, int b=5){
 		}
 };
 
+void intdiv(int a=4, int b=5){
+	long long i = 0;\
+	while (i < 20000000000){
+			a/=b;
+			i++;
+		}
+};
+
 
 
 int main() {
