@@ -24,6 +24,14 @@ void add(int a = 3, int b = 4){
 	}
 }
 
+void intmult(int a=4, int b=5){
+	long long i = 0;\
+	while (i < 50000000000){
+			a*=b;
+			i++;
+		}
+};
+
 
 
 int main() {
