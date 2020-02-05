@@ -65,7 +65,10 @@ void floatdiv(float a, float b){
 };
 
 int main() {
-
+	time_t aimie = time(NULL);
+	add();
+	time_t newi = time(NULL);
+	cout << newi - aimie<< endl;
 
 	return 0;
 }
