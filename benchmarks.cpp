@@ -56,6 +56,13 @@ void floatmult(float a, float b){
 		}
 };
 
+void floatdiv(float a, float b){
+	long long i = 0;\
+	while (i < 20000000000){
+			a/=b;
+			i++;
+		}
+};
 
 int main() {
 
