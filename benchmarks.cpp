@@ -40,6 +40,14 @@ void intdiv(int a=4, int b=5){
 		}
 };
 
+void floatadd(float a, float b){
+	long long i = 0;\
+	while (i < 100000000000){
+			a+=b;
+			i++;
+		}
+};
+
 
 
 int main() {
