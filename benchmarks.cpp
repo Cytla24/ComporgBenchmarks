@@ -48,6 +48,13 @@ void floatadd(float a, float b){
 		}
 };
 
+void floatmult(float a, float b){
+	long long i = 0;\
+	while (i < 50000000000){
+			a*=b;
+			i++;
+		}
+};
 
 
 int main() {
