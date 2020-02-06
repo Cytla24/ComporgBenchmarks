@@ -21,9 +21,7 @@ void floatmult(float a, float b);
 void floatdiv(float a, float b);
 void readarr();
 void writearr();
-void writef();
-void readf();
-
+void writeread();
 void add(int a = 3, int b = 4){
 	long long i = 0;
 	while (i < 100000000000){
@@ -89,7 +87,8 @@ void writarr(){
 //	delete [] a;
 }
 
-void writef(){
+void writeread(){
+	time_t aimie = time(NULL);
 	std::ofstream file;
 	file.open ("inp.txt");
 	const int x = 1;
@@ -101,19 +100,33 @@ void writef(){
 		i++;
 	};
 	file.close();
-}
 
-void readf(){
+	time_t newi = time(NULL);
+	cout << "write: "<< newi - aimie<< endl;
 
+	time_t aimie2 = time(NULL);
+
+
+	std::ifstream file2;
+	file2.open("inp.txt");
+	i = 0;
+
+	while(i < 250000000){
+		file2.read((char*) &x, sizeof(int));
+		i++;
+	};
+	file2.close();
+	time_t newi2 = time(NULL);
+	cout << "read: " << newi2 - aimie2<< endl;
 
 }
 
 
 int main() {
-	time_t aimie = time(NULL);
-	writef();
-	time_t newi = time(NULL);
-	cout << newi - aimie<< endl;
+//	time_t aimie = time(NULL);
+	writeread();
+//	time_t newi = time(NULL);
+//	cout << newi - aimie<< endl;
 
 	return 0;
 }
