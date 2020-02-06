@@ -19,9 +19,9 @@ void intdiv(int a, int b);
 void floatadd(float a, float b);
 void floatmult(float a, float b);
 void floatdiv(float a, float b);
-void readarr();
 void writearr();
 void writeread();
+
 void add(int a = 3, int b = 4){
 	long long i = 0;
 	while (i < 100000000000){
@@ -68,10 +68,6 @@ void floatdiv(float a = 3.32, float b = 6.9){
 			a/=b;
 			i++;
 		}
-};
-
-void readarr(){
-
 };
 
 void writearr(){
