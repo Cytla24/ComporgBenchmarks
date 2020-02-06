@@ -17,7 +17,7 @@ void add(int a, int b);
 void intmult(int a, int b);
 void intdiv(int a, int b);
 void floatadd(float a, float b);
-void floatmult(float a, float b);
+void floatmult(double a, double b);
 void floatdiv(float a, float b);
 void writearr();
 void writeread();
@@ -54,12 +54,17 @@ void floatadd(float a = 3.32, float b = 6.9){
 		}
 };
 
-void floatmult(float a = 3.32, float b = 1.9){
+void floatmult(double a = 3.32, double b = 1.9){
 	long long i = 0;
-	while (i < 50000000000){
-			a = a*b;
-			i++;
+	int count = 0;
+	while (count< 10){
+		while (i < 5000000000){
+					a = a*b;
+					i++;
 		}
+		count++;
+	}
+
 };
 
 void floatdiv(float a = 3.32, float b = 6.9){
@@ -92,7 +97,7 @@ void writearr(){
 	time_t aimie2 = time(NULL);
 
 	i = 0;
-	std::int32_t f = 0;
+	int f = 0;
 	count = 0;
 	while (count<50){
 		i = 0;
@@ -145,7 +150,7 @@ void writeread(){
 
 int main() {
 //	time_t aimie = time(NULL);
-	writearr();
+	floatmult();
 //	time_t newi = time(NULL);
 //	cout << newi - aimie<< endl;
 
