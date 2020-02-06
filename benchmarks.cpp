@@ -8,6 +8,8 @@
 #include <cmath>
 #include <ctime>
 #include <cstdint>
+#include <stdio.h>
+#include <fstream>
 
 using namespace std;
 
@@ -19,6 +21,8 @@ void floatmult(float a, float b);
 void floatdiv(float a, float b);
 void readarr();
 void writearr();
+void writef();
+void readf();
 
 void add(int a = 3, int b = 4){
 	long long i = 0;
@@ -73,18 +77,41 @@ void readarr(){
 };
 
 void writarr(){
-	long long i = 0;
-	std::int32_t b = 2;
-	int *a = new int[5000000000];
-	while (i < 5000000000){
-		a[i] = b;
-		i++;
-	}
-	delete [] a;
+
+
+//	long long i = 0;
+//	std::int32_t b = 2;
+//	int *a = new int[5000000000];
+//	while (i < 5000000000){
+//		a[i] = b;
+//		i++;
+//	}
+//	delete [] a;
 }
+
+void writef(){
+	std::ofstream file;
+	file.open ("inp.txt");
+	const int x = 1;
+
+	long long i = 0;
+
+	while(i < 250000000){
+		file.write((char*) &x, sizeof(int));
+		i++;
+	};
+	file.close();
+}
+
+void readf(){
+
+
+}
+
 
 int main() {
 	time_t aimie = time(NULL);
+	writef();
 	time_t newi = time(NULL);
 	cout << newi - aimie<< endl;
 
