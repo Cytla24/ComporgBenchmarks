@@ -74,17 +74,22 @@ void readarr(){
 
 };
 
-void writarr(){
+void writearr(){
 
 
-//	long long i = 0;
-//	std::int32_t b = 2;
-//	int *a = new int[5000000000];
-//	while (i < 5000000000){
-//		a[i] = b;
-//		i++;
-//	}
-//	delete [] a;
+	long long i = 0;
+	std::int32_t b = 2;
+	int *a = new int[100000000];
+	int count = 0;
+	while (count<50){
+		i = 0;
+		while (i < 100000000){
+			a[i] = b;
+			i++;
+		}
+		count++;
+	}
+	delete [] a;
 }
 
 void writeread(){
@@ -123,10 +128,10 @@ void writeread(){
 
 
 int main() {
-//	time_t aimie = time(NULL);
-	writeread();
-//	time_t newi = time(NULL);
-//	cout << newi - aimie<< endl;
+	time_t aimie = time(NULL);
+	writearr();
+	time_t newi = time(NULL);
+	cout << newi - aimie<< endl;
 
 	return 0;
 }
