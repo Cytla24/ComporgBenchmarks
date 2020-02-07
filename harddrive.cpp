@@ -49,8 +49,3 @@ void writeread(){
 	cout << "read: " << newi2 - aimie2<< endl;
 
 }
-
-int main() {
-	writeread();
-	return 0;
-}

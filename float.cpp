@@ -16,7 +16,7 @@
 using namespace std;
 
 void floatadd(float a, float b);
-void floatmult(double a, double b);
+void floatmult(float a, float b);
 void floatdiv(float a, float b);
 
 void floatadd(float a = 3.32, float b = 6.9){
@@ -27,7 +27,7 @@ void floatadd(float a = 3.32, float b = 6.9){
 		}
 };
 
-void floatmult(double a = 3.32, double b = 1.9){
+void floatmult(float a = 3.32, float b = 1.9){
 	long long i = 0;
 	while (i < 50000000000){
 				a = a*b;
@@ -43,12 +43,3 @@ void floatdiv(float a = 3.32, float b = 6.9){
 			i++;
 		}
 };
-
-int main() {
-	time_t aimie = time(NULL);
-	floatmult();
-	time_t newi = time(NULL);
-	cout << newi - aimie<< endl;
-
-	return 0;
-}

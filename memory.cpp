@@ -55,7 +55,3 @@ void writearr(){
 	delete [] a;
 }
 
-int main() {
-	writearr();
-	return 0;
-}

@@ -45,7 +45,7 @@ void intdiv(int a=4, int b=5){
 
 int main() {
 	time_t aimie = time(NULL);
-	intmult();
+	add();
 	time_t newi = time(NULL);
 	cout << newi - aimie<< endl;
 
