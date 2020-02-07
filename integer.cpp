@@ -56,13 +56,9 @@ void floatadd(float a = 3.32, float b = 6.9){
 
 void floatmult(double a = 3.32, double b = 1.9){
 	long long i = 0;
-	int count = 0;
-	while (count< 10){
-		while (i < 5000000000){
-					a = a*b;
-					i++;
-		}
-		count++;
+	while (i < 50000000000){
+				a = a*b;
+				i++;
 	}
 
 };
@@ -149,10 +145,10 @@ void writeread(){
 
 
 int main() {
-//	time_t aimie = time(NULL);
+	time_t aimie = time(NULL);
 	floatmult();
-//	time_t newi = time(NULL);
-//	cout << newi - aimie<< endl;
+	time_t newi = time(NULL);
+	cout << newi - aimie<< endl;
 
 	return 0;
 }
